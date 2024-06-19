@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando para o Instagram...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redirecionando para o Instagram...</h1>
+    <script>
+        window.onload = function() {
+            const deepLink = 'https://urlgeni.us/instagram/8fv6u';
+            const webFallback = 'https://www.instagram.com/medfacil.vilagalvao';
+
+            setTimeout(() => {
+                window.location.href = deepLink;
+            }, 25);
+
+            setTimeout(() => {
+                window.location.href = webFallback;
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

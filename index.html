@@ -12,7 +12,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f7f7f7';
         }
         h1 {
             font-size: 1.5em;
@@ -22,18 +22,22 @@
 </head>
 <body>
     <h1>Redirecionando para o Instagram...</h1>
+    
     <script>
         window.onload = function() {
             const deepLink = 'https://urlgeni.us/instagram/8fv6u';
-            const webFallback = 'https://www.instagram.com/medfacil.vilagalvao';
-
+            
+            // Cria um link para o deep link
+            const deepLinkElement = document.createElement('a');
+            deepLinkElement.href = deepLink;
+            deepLinkElement.target = '_blank';
+            deepLinkElement.style.display = 'none';
+            document.body.appendChild(deepLinkElement);
+            
+            // Tenta abrir o deep link
             setTimeout(() => {
-                window.location.href = deepLink;
+                deepLinkElement.click();
             }, 25);
-
-            setTimeout(() => {
-                window.location.href = webFallback;
-            }, 1000);
         };
     </script>
 </body>
